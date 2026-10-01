@@ -1,0 +1,129 @@
+/* ============================================================
+   QUIÉNES SOMOS
+   ============================================================ */
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+
+/* ============================================================
+   IMAGEN
+   ============================================================ */
+
+.about__media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+
+.about__content h2 {
+  font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+  margin: 10px 0 22px;
+  line-height: 1.15;
+}
+
+.about__text {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+
+/* ============================================================
+   LISTA
+   ============================================================ */
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.about__list li {
+  position: relative;
+  padding-left: 23px;
+
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.about__list li::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: 9px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--brass);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 860px) {
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about__media img {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .about__grid {
+    gap: 30px;
+  }
+
+  .about__media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about__content h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .about__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .about__list {
+    gap: 11px;
+  }
+
+  .about__list li {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+}
